@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #a4c9ff;
+  --color-primary-container: #4a9eff;
+  --color-secondary: #4ae176;
+  --color-tertiary: #ffb95f;
+  --color-error: #ffb4ab;
+  --color-surface: #031427;
+  --color-surface-container: #102034;
+  --color-surface-container-low: #0b1c30;
+  --color-surface-container-highest: #26364a;
+  --color-surface-container-lowest: #000f21;
+  --color-on-surface: #d3e4fe;
+  --color-on-surface-variant: #c0c7d4;
+  --color-outline: #8a919e;
+  --color-outline-variant: #414752;
+
+  --spacing-gutter: 1px;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 0.75rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.5rem;
+}
+
+@utility text-h1 { font-size: 24px; line-height: 32px; letter-spacing: -0.02em; }
+@utility text-h2 { font-size: 18px; line-height: 24px; letter-spacing: -0.01em; }
+@utility text-body-base { font-size: 14px; line-height: 20px; }
+@utility text-body-sm { font-size: 12px; line-height: 16px; }
+@utility text-label-caps { font-size: 11px; line-height: 12px; letter-spacing: 0.06em; }
+@utility text-data-mono { font-size: 13px; line-height: 16px; letter-spacing: 0.02em; }
+
+@utility font-h1 { font-family: 'Inter', sans-serif; font-weight: 600; }
+@utility font-h2 { font-family: 'Inter', sans-serif; font-weight: 600; }
+@utility font-body-base { font-family: 'Inter', sans-serif; font-weight: 400; }
+@utility font-body-sm { font-family: 'Inter', sans-serif; font-weight: 400; }
+@utility font-label-caps { font-family: 'Inter', sans-serif; font-weight: 700; }
+@utility font-data-mono { font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+
+body {
+  background-color: #0f1117;
+  color: #d3e4fe;
+}
+
+.card-surface { background-color: #1a1d27; }
+.sub-surface { background-color: #252936; }
+.border-thin { border: 1px solid rgba(255, 255, 255, 0.08); }
+.border-b-thin { border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+
+@keyframes pulse-secondary {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 225, 118, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(74, 225, 118, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 225, 118, 0); }
+}
+@keyframes pulse-error {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 180, 171, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(255, 180, 171, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 180, 171, 0); }
+}
+.animate-pulse-secondary {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse-secondary 2s infinite;
+}
+.animate-pulse-error {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #ffb4ab;
+    animation: pulse-error 2s infinite;
+}

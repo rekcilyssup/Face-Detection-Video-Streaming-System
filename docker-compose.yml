@@ -39,7 +39,7 @@ services:
 
   # ── Frontend (React + Nginx) ────────────────────────────
   frontend:
-    build: ./Frontend
+    build: ./frontend
     ports:
       - "3000:3000"
     depends_on:

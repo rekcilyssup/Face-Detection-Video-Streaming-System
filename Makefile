@@ -3,7 +3,7 @@
 up:              ## Start all services
 	docker compose up --build -d
 	@echo ""
-	@echo "🟢 Frontend:  http://localhost:3000"
+	@echo "🟢 frontend:  http://localhost:3000"
 	@echo "🟢 API Docs:  http://localhost:8000/docs"
 	@echo "🟢 Health:    http://localhost:8000/api/v1/health"
 
@@ -27,7 +27,7 @@ health:          ## Check service health
 
 clean:           ## Remove all containers, volumes, and build artifacts
 	docker compose down -v --rmi local
-	rm -rf Frontend/dist backend/__pycache__
+	rm -rf frontend/dist backend/__pycache__
 
 help:            ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'

@@ -53,8 +53,6 @@ graph TD
     API_ROI -.->|Queries| DB
 ```
 
-*(Note: To fulfill the `architecture.png` requirement, take a screenshot of the diagram above and save it to the project root!)*
-
 ## Getting Started ("Stranger in 5 mins" Setup)
 
 ### Prerequisites
